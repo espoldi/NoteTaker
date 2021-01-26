@@ -7,4 +7,9 @@ module.exports = function(app) {
         res.json(notesData);
     });
 
+    app.post("/api/notes", function(req, res) {
+        let saveNote = req.body;
+        notesData.push(saveNote);
+        res.json(saveNote);
+    });
 }
