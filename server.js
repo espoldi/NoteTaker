@@ -3,8 +3,12 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
-require("./path/apiRoutes")(app);
-require("./path/htmlRoutes")(app);
+// Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // Listening to port
 app.listen(PORT, function() {
