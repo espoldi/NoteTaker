@@ -28,6 +28,8 @@ Make sure that your command prompt is in the correct folder and type in the foll
 
 [Github Repository](https://github.com/espoldi/NoteTaker)
 
+[Heroku Application](https://sleepy-atoll-90209.herokuapp.com/)
+
 ## License
 
 This project is protected under MIT License.
