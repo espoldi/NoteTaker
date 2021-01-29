@@ -15,6 +15,8 @@ module.exports = function (app) {
         saveNote.id = id;
         postNum = postNum + 1;
         notesData.push(saveNote);
+        fs.writeFile('./db/db.json', JSON.stringify(saveNote), () => {
+            console.log("Write successful.");});
         res.json(saveNote);
     });
 
@@ -26,7 +28,6 @@ module.exports = function (app) {
                 notesData.splice(i, 1);
             };
         };
-
         res.json(notesData);
 
     });
