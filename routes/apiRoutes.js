@@ -26,6 +26,8 @@ module.exports = function (app) {
         for (let i = 0; i < notesData.length; i++) {
             if (chosen === notesData[i].id) {
                 notesData.splice(i, 1);
+                fs.writeFile('./db/db.json', JSON.stringify(notesData), () => {
+                    console.log("Update successful.");});
             };
         };
         res.json(notesData);
