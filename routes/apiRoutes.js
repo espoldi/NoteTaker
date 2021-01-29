@@ -15,7 +15,7 @@ module.exports = function (app) {
         saveNote.id = id;
         postNum = postNum + 1;
         notesData.push(saveNote);
-        fs.writeFile('./db/db.json', JSON.stringify(saveNote), () => {
+        fs.writeFile('./db/db.json', JSON.stringify(notesData), () => {
             console.log("Write successful.");});
         res.json(saveNote);
     });
